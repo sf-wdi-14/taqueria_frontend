@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
   .module('taqueriaFrontendApp', [
     'ngAnimate',
     'ngCookies',
@@ -16,18 +16,15 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+  
+app.config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/tacos', {
+        templateUrl: 'views/tacos/index.html',
+        controller: 'TacosCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/tacos'
       });
   });
