@@ -24,6 +24,18 @@ app.config(function ($routeProvider) {
         templateUrl: 'views/tacos/index.html',
         controller: 'TacosCtrl'
       })
+      .when('/tacos/new', {
+        templateUrl: 'views/tacos/new.html',
+        controller: 'NewTacoCtrl'
+      })
+      .when('/tacos/:id', {
+        templateUrl: 'views/tacos/show.html',
+        controller: 'TacoCtrl'
+      })
+      .when('/tacos/:id/edit', {
+        templateUrl: 'views/tacos/edit.html',
+        controller: 'EditTacoCtrl'
+      })
       .otherwise({
         redirectTo: '/tacos'
       });

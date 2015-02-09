@@ -9,4 +9,11 @@
 	<li>A Taco service that connects to our Rails backend at http://localhost:3000/tacos using $resource</li>
 </ul>
 
+<h4>Tacos:</h4>
+<ul>
+	<li ng-repeat="taco in tacos"><a ng-href="#/tacos/{{ taco.id }}">{{ taco.id }}</a>, <a href="#" ng-click="destroy(taco)">Delete</a></li>
+</ul>
+
+<a href="#/tacos/new">New taco</a>
+
 <p>We prepared a TacosCtrl for you (you are looking at it right now).</p>
